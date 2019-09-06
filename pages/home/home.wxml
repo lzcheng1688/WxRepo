@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<text class="title">Hello world</text>
+<button size="mini">按钮</button>
+<!--数据绑定 js中-->
+<view>我的名字叫:{{name}}</view>
+<view>年龄:{{age+10}}</view>
+<!--for循环-->
+<view wx:for="{{student}}">
+ {{item.name +"----"+ item.age}}
+</view>
+<!--事件监听-->
+<view >计算结果:{{count}}</view>
+<button bindtap="handerclick" size="mini">+</button>
+<button size="mini" bindtap="jian">-</button>
+<!--获取用户信息-->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+<!--展示用户信息-->
+<open-data type="userNickName"></open-data>
